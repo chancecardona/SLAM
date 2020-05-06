@@ -1,0 +1,2 @@
+/usr/bin/ar qc libutils.a  CMakeFiles/utils.dir/LegoRobot.cpp.o CMakeFiles/utils.dir/string_utility.cpp.o
+/usr/bin/ranlib libutils.a
