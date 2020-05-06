@@ -1,8 +1,8 @@
 SET(EXAMPLES
-        slam_01_a_plot_motor_ticks.cpp
-        #slam_01_b_print_motor_increments.cpp
-        #slam_01_c_plot_motor_increments.cpp
-        #slam_02_a_filter_motor_question.cpp
+        plot_motor_ticks.cpp
+        #print_motor_increments.cpp
+        #plot_motor_increments.cpp
+        #filter_motor_question.cpp
     )
 
 foreach(SRC IN LISTS EXAMPLES)
