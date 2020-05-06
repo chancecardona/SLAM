@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/plot_motor_ticks.dir/plot_motor_ticks.cpp.o  -o plot_motor_ticks  -lutility 
