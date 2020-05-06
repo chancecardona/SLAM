@@ -4,8 +4,8 @@ To install and setup:
 <ul>
     <li> git clone https://github.com/chancecardona/SLAM.git </li>
     <li> cd SLAM/ </li>
-    <li> git init submodule </li>
-    <li> git submodule update </li>
+    <li> git init submodule extern/matplotlib-cpp</li>
+    <li> git submodule update extern/matplotlib-cpp</li>
     <li> mkdir build </li>
     <li> cd build/ </li>
     <li> cmake .. </li>
