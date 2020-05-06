@@ -4,6 +4,8 @@
 using namespace std;
 
 int main(){
+    namespace plt = matplotlibcpp;
+
     //open motor file
     ifstream motors_file;
     motors_file.open("robot4_motors.txt");
@@ -22,6 +24,10 @@ int main(){
     }
     motors_file.close();
     
+    plt::plot(left_motor_ticks);
+    plt::plot(right_motor_ticks);
+    plt::title("Absolute Motor Ticks");
+    plt::show();
 
     return 0;
 }
