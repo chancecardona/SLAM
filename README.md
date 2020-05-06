@@ -11,3 +11,10 @@ To install and setup:
     <li> cmake .. </li>
     <li> make </li>
 </ul>
+If there are errors with numpy/arrayobject.h first make sure python2.7 and python2.7-numpy are installed on your system and then if error persists run:
+<ul>
+    Ubuntu:
+    <li> sudo ln -s /usr/lib/python2.7/dist-packages/numpy/core/include/numpy /usr/include/numpy </li>
+    Arch:
+    <li> sudo ln -s /usr/lib/python2.7/site-packages/numpy/core/include/numpy /usr/include/numpy </li>
+</ul>
