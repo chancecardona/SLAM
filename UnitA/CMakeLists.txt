@@ -2,7 +2,7 @@ SET(EXAMPLES
         plot_motor_ticks.cpp
         #print_motor_increments.cpp
         #plot_motor_increments.cpp
-        #filter_motor_question.cpp
+        filter_motor_question.cpp
     )
 
 

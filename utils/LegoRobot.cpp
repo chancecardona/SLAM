@@ -4,6 +4,7 @@
 #include "LegoRobot.h"
 //#include "string_utility.h";
 
+// Initialization list for constructor
 LegoRobot::LegoRobot() : motor_ticks_raw_(), motor_ticks_() {}
 
 void LegoRobot::read(const string &file) {
