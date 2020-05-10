@@ -3,7 +3,7 @@
 
 const auto pi =  3.141592653589;
 
-void print_pose(Pose2D);
+void print_pose(Pose2D, ostream&);
 Pose2D filter_step(Pose2D, MotorTickRecord, double, double, double);
 
 int main(){
@@ -11,7 +11,7 @@ int main(){
     namespace plt = matplotlibcpp;
 
     const auto ticks_to_mm = 0.349;
-    const auto robot_width = 150.0; //mm
+    const auto robot_width = 173.0; //mm
     const auto scanner_displacement = 30.0; //mm
 
     LegoRobot l;
@@ -22,21 +22,24 @@ int main(){
     vector<double> y_coords;
     Pose2D pose = {0.0, 0.0, 0.0};
     
+    ofstream f;
+    f.open("../UnitA/poses_from_ticks.txt");
     for (const auto& tick : motor_tick_diffs){
         pose = filter_step(pose, tick, ticks_to_mm, robot_width, scanner_displacement);
-        print_pose(pose);
+        print_pose(pose, f);
         x_coords.push_back(get<0>(pose));
         y_coords.push_back(get<1>(pose));
     }
-
+    f.close();
 
     plt::plot(x_coords, y_coords, "bo");
     plt::show();
 }
 
-void print_pose(Pose2D pose) {
+//Output is either cout or a file
+void print_pose(Pose2D pose, ostream& output) {
     const auto [x, y, theta] = pose;
-    std::cout << "(" << x << "," << y << "," << theta << ")" << std::endl;
+    output << "(" << x << "," << y << "," << theta << ")" << std::endl;
 }
 
 //Change vectors to ROS::Pose2D.

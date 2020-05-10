@@ -13,7 +13,7 @@ public:
 
 private:
   vector<int> reference_positions_;
-  vector<int> scan_data_;
+  vector<vector<int>> scan_data_;
   vector<int> pole_indices_;
   vector<MotorTickRecord> motor_ticks_raw_;
   vector<MotorTickRecord> motor_ticks_;
