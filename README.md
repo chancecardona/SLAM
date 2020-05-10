@@ -1,4 +1,4 @@
-## Dr. Brenner's SLAM Lectures Implemented in Modern Python. ##
+## Dr. Brenner's SLAM Lectures Implemented in Modern C++. ##
 Code heavily inspired and using code from https://github.com/patrick--/SLAM-Exploration/blob/master/
 ### Installation and Setup ###
 <ul>
